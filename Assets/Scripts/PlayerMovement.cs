@@ -7,16 +7,21 @@ public class PlayerMovement : MonoBehaviour
     private const string JUMPING_ANIMATION_TRIGGER = "IsJumping";
     private const string WALKING_ANIMATION_TRIGGER = "Speed";
     
-    private Transform playerTransform;
+    [SerializeField] private Transform groundCheckTransform ;
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private Rigidbody2D playerRigidbody2D;
+    [SerializeField] private float jumpForce = 10f;
+    
     private Animator playerAnimator;
     float speed = 0f;
+
     
 
 
 
     void Awake()
     {
-        playerTransform = GetComponent<Transform>();
+       
         playerAnimator = GetComponent<Animator>();
     }
 
@@ -32,28 +37,30 @@ public class PlayerMovement : MonoBehaviour
     
     private  void Movement()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space)&& IsGrounded())
         {
-            playerTransform.position += new Vector3(0, 100f, 0)* Time.deltaTime;
+            
+            playerRigidbody2D.AddForce(new Vector3(0, jumpForce, 0), ForceMode2D.Impulse);
+            
             playerAnimator.SetTrigger(JUMPING_ANIMATION_TRIGGER);
         }
         else
         {
             playerAnimator.ResetTrigger(JUMPING_ANIMATION_TRIGGER);
         }
-      
+
         if(Input.GetKey(KeyCode.A))
         {
 
-            playerTransform.position += new Vector3(-1f, 0, 0)*Time.deltaTime;
-            playerTransform.rotation = Quaternion.Euler(0, 180, 0);
+            this.transform.position += new Vector3(-1f, 0, 0)*Time.deltaTime;
+            this.transform.rotation = Quaternion.Euler(0, 180, 0);
             speed = 1;
             playerAnimator.SetFloat(WALKING_ANIMATION_TRIGGER, speed);
         }
         else if(Input.GetKey(KeyCode.D))
         {
-            playerTransform.position += new Vector3(1f, 0, 0)*Time.deltaTime;
-            playerTransform.rotation = Quaternion.Euler(0, 0, 0);
+            this.transform.position += new Vector3(1f, 0, 0)*Time.deltaTime;
+            this.transform.rotation = Quaternion.Euler(0, 0, 0);
             speed = 1;
             playerAnimator.SetFloat(WALKING_ANIMATION_TRIGGER, speed);
         }
@@ -64,6 +71,14 @@ public class PlayerMovement : MonoBehaviour
             playerAnimator.SetFloat(WALKING_ANIMATION_TRIGGER, speed);
         }
 
+    }
+    private bool IsGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheckTransform.position,  0.1f,groundLayer);
+    }
+    public void takeDamage()
+    {
+        Debug.Log("Player took damage");
     }
 
     
