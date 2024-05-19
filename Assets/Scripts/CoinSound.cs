@@ -3,27 +3,25 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class SpikesDamage : MonoBehaviour
+public class CoinSound : MonoBehaviour
 {
+    AudioSource audioSource ;
     PlayerActions playerActions;
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         
     }
 
     // Update is called once per frame
-    void Update()
+   void OnTriggerEnter2D(Collider2D other)
     {
-        
-    }
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        playerActions = other.GetComponent<PlayerActions>();
+        playerActions = other.gameObject.GetComponent<PlayerActions>();
         if (playerActions != null)
         {
-            playerActions.TakeDamage();
+            audioSource.Play();
+            Destroy(gameObject, .6f);
         }
     }
-    
 }

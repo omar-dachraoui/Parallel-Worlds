@@ -15,7 +15,7 @@ public class PlayerActions : MonoBehaviour
     {
         
     }
-    public void takeDamage()
+    public void TakeDamage()
     {
         Debug.Log("Player took damage");
     }
