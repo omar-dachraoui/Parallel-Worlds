@@ -9,11 +9,12 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] private Transform groundCheckTransform ;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private Rigidbody2D playerRigidbody2D;
-    [SerializeField] private float jumpForce = 10f;
+   
+    
     
     private Animator playerAnimator;
     float speed = 0f;
+    [SerializeField]private float jumpForce = 1f;
 
     
 
@@ -40,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space)&& IsGrounded())
         {
             
-            playerRigidbody2D.AddForce(new Vector3(0, jumpForce, 0), ForceMode2D.Impulse);
+             this.transform.position += new Vector3(0, jumpForce, 0)*Time.deltaTime;
             
             playerAnimator.SetTrigger(JUMPING_ANIMATION_TRIGGER);
         }
@@ -76,11 +77,7 @@ public class PlayerMovement : MonoBehaviour
     {
         return Physics2D.OverlapCircle(groundCheckTransform.position,  0.1f,groundLayer);
     }
-    public void takeDamage()
-    {
-        Debug.Log("Player took damage");
-    }
-
+    
     
 
     

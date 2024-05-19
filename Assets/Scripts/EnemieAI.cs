@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class SpikesDamage : MonoBehaviour
+public class EnemieAI : MonoBehaviour
 {
     PlayerActions playerActions;
     // Start is called before the first frame update
@@ -18,12 +18,10 @@ public class SpikesDamage : MonoBehaviour
         
     }
     void OnTriggerEnter2D(Collider2D other)
-    {
-        playerActions = other.GetComponent<PlayerActions>();
+    { playerActions = other.gameObject.GetComponent<PlayerActions>();
         if (playerActions != null)
         {
-            playerActions.takeDamage();
+            Debug.Log("Player detected");
         }
     }
-    
 }
