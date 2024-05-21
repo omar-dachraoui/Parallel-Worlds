@@ -11,16 +11,18 @@ public class EnemieAI : MonoBehaviour
     public LayerMask playerLayer; // Layer mask to filter only enemy colliders
     PlayerActions playerActions;
     
-    bool isPlayerInRange = false;
+    bool isPlayerInRange ;
     [SerializeField] private float speed = .8f;
     [SerializeField] private Transform playerTransform;
+    [SerializeField] private float offset = 1f;
     
    
     Animator enemieAnimator ; 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         enemieAnimator = GetComponent<Animator>();
+        playerActions = playerTransform.GetComponent<PlayerActions>();
     }
 
     // Update is called once per frame
@@ -28,15 +30,24 @@ public class EnemieAI : MonoBehaviour
     {
         if (DetectEnemies())
         {
+            Flip();
             Debug.Log("Enemy detected!");
-            MoveTowardsPlayer();
+            
+            if(this.transform.position.x != playerTransform.position.x + offset)
+            {
+                MoveTowardsPlayer();
+            }
+           
+            
             if(isPlayerInRange)
             {
                 enemieAnimator.SetBool(ATTACK_ANIMATION_TRIGGER, true);
+                enemieAnimator.SetBool(RUN_ANIMATION_TRIGGER, false);
             }
             else
             {
                 enemieAnimator.SetBool(ATTACK_ANIMATION_TRIGGER, false);
+                enemieAnimator.SetBool(RUN_ANIMATION_TRIGGER, true);
             }
 
         }
@@ -92,6 +103,20 @@ public class EnemieAI : MonoBehaviour
     {
         this.transform.position = Vector2.MoveTowards(this.transform.position,playerTransform.position, speed * Time.deltaTime);
         enemieAnimator.SetBool(RUN_ANIMATION_TRIGGER, true);
-        //this.transform.rotation = Quaternion.
+        Debug.Log("Moving towards player");
     }
+
+    void Flip()
+    {
+       if(this.transform.position.x < playerTransform.position.x)
+            {
+                this.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            else
+            {
+                this.transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
+    }
+
+    
 }
