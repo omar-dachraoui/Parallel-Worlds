@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class IcePlayerMovement : MonoBehaviour
 {
-   private const string JUMPING_ANIMATION_TRIGGER = "IsJumping";
+    private const string JUMPING_ANIMATION_TRIGGER = "IsJumping";
     private const string RUNNING_ANIMATION_BOOL = "IsRunning";
     private float horizontal;
     [SerializeField] private float speed = 8f;
@@ -70,7 +68,4 @@ public class PlayerMovement : MonoBehaviour
         bool isJumping = Mathf.Abs(rb.velocity.y) > 0.1f;
         playerAnimator.SetBool(JUMPING_ANIMATION_TRIGGER, isJumping);
     }
-    
-
-    
 }

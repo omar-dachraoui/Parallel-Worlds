@@ -161,7 +161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50.4, y: -33.1}
+  m_AnchoredPosition: {x: 50.4, y: -270.2}
   m_SizeDelta: {x: 43.1881, y: 17.4508}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &28350996
@@ -278,7 +278,7 @@ GameObject:
   m_Component:
   - component: {fileID: 58140103}
   - component: {fileID: 58140104}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_M_0001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -437,7 +437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 91412564}
   - component: {fileID: 91412565}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_M_0001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -582,7 +582,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 472.4, y: -33.1}
+  m_AnchoredPosition: {x: 61.4, y: -33.1}
   m_SizeDelta: {x: 43.1881, y: 17.4508}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &125847909
@@ -994,7 +994,7 @@ GameObject:
   m_Component:
   - component: {fileID: 252476959}
   - component: {fileID: 252476960}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_M_0001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1078,7 +1078,7 @@ GameObject:
   m_Component:
   - component: {fileID: 269406995}
   - component: {fileID: 269406996}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_M_0001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1162,7 +1162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 275117928}
   - component: {fileID: 275117929}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_S_R_0001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1321,7 +1321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 289576404}
   - component: {fileID: 289576405}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_M_0001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1489,7 +1489,7 @@ GameObject:
   m_Component:
   - component: {fileID: 296431110}
   - component: {fileID: 296431111}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_M_0001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1811,7 +1811,7 @@ GameObject:
   m_Component:
   - component: {fileID: 326865496}
   - component: {fileID: 326865497}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_M_0001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1895,7 +1895,7 @@ GameObject:
   m_Component:
   - component: {fileID: 328972241}
   - component: {fileID: 328972242}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_S_R_0001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2122,7 +2122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 358097384}
   - component: {fileID: 358097385}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_S_R_0001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2206,7 +2206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 367440666}
   - component: {fileID: 367440667}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_S_R_0001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2290,7 +2290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 391808460}
   - component: {fileID: 391808461}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_M_0001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2375,7 +2375,7 @@ GameObject:
   - component: {fileID: 395373870}
   - component: {fileID: 395373872}
   - component: {fileID: 395373871}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: PixelManPlatforms_8 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2583,7 +2583,7 @@ GameObject:
   m_Component:
   - component: {fileID: 419673191}
   - component: {fileID: 419673192}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_S_R_0001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2735,7 +2735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 465511773}
   - component: {fileID: 465511774}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_S_R_0001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2819,7 +2819,7 @@ GameObject:
   m_Component:
   - component: {fileID: 480692316}
   - component: {fileID: 480692317}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_S_R_0001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2978,7 +2978,7 @@ GameObject:
   m_Component:
   - component: {fileID: 497210362}
   - component: {fileID: 497210363}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_M_0001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3434,7 +3434,7 @@ GameObject:
   - component: {fileID: 569514819}
   - component: {fileID: 569514821}
   - component: {fileID: 569514820}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: PixelManPlatforms_8 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3652,7 +3652,7 @@ GameObject:
   - component: {fileID: 591246404}
   - component: {fileID: 591246406}
   - component: {fileID: 591246405}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: PixelManPlatforms_8 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3869,7 +3869,7 @@ GameObject:
   m_Component:
   - component: {fileID: 694738316}
   - component: {fileID: 694738317}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_S_R_0001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4074,17 +4074,17 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0.5
-    height: 1
+    width: 1
+    height: 0.5
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.19
+  orthographic size: 1.02
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 191
+    m_Bits: 447
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -4265,7 +4265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 768423845}
   - component: {fileID: 768423846}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_M_0001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4350,7 +4350,7 @@ GameObject:
   - component: {fileID: 792428448}
   - component: {fileID: 792428450}
   - component: {fileID: 792428449}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: PixelManPlatforms_8 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4658,7 +4658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 836622704}
   - component: {fileID: 836622705}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_S_R_0001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4827,7 +4827,7 @@ GameObject:
   - component: {fileID: 918495369}
   - component: {fileID: 918495371}
   - component: {fileID: 918495370}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: PixelManPlatforms_8 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5128,7 +5128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 947728862}
   - component: {fileID: 947728863}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_S_R_0001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5213,7 +5213,7 @@ GameObject:
   - component: {fileID: 949597546}
   - component: {fileID: 949597545}
   - component: {fileID: 949597544}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: PixelManPlatforms_8 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5699,19 +5699,19 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.5
-    y: 0
-    width: 0.5
+    x: 0
+    y: 0.5
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.19
+  orthographic size: 1.02
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 127
+    m_Bits: 383
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -6073,7 +6073,7 @@ GameObject:
   - component: {fileID: 1032879929}
   - component: {fileID: 1032879930}
   - component: {fileID: 1032879931}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FirePlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6232,11 +6232,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d142e8b574327f24e9718a580be17138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundCheckTransform: {fileID: 1999408787}
+  speed: 2
+  jumpingPower: 4
+  rb: {fileID: 1032879925}
+  groundCheck: {fileID: 1999408787}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  jumpForce: 60
 --- !u!95 &1032879930
 Animator:
   serializedVersion: 5
@@ -6322,7 +6324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1050319455}
   - component: {fileID: 1050319456}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_S_R_0001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6481,7 +6483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1175157348}
   - component: {fileID: 1175157349}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_S_R_0001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6573,7 +6575,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1177950012
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6674,7 +6676,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb09087fe7923014484b1a4287a2eb17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemieCenterTransform: {fileID: 0}
+  detectionRadius: 5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  speed: 1.5
+  playerTransform: {fileID: 0}
 --- !u!1 &1189240582
 GameObject:
   m_ObjectHideFlags: 0
@@ -6899,7 +6906,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1207316899}
   - component: {fileID: 1207316900}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_S_R_0001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7142,7 +7149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1244253590}
   - component: {fileID: 1244253591}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_S_R_0001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7226,7 +7233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1248592379}
   - component: {fileID: 1248592380}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_M_0001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7313,6 +7320,7 @@ GameObject:
   - component: {fileID: 1260304034}
   - component: {fileID: 1260304032}
   - component: {fileID: 1260304035}
+  - component: {fileID: 1260304036}
   m_Layer: 0
   m_Name: Mushroom
   m_TagString: Untagged
@@ -7485,7 +7493,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.011737078, y: -0.09780901}
+  m_Offset: {x: 0.0036871433, y: -0.14265847}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7496,8 +7504,26 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3200307, y: 0.22456567}
+  m_Size: {x: 0.540339, y: 0.13486671}
   m_EdgeRadius: 0
+--- !u!114 &1260304036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260304029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb09087fe7923014484b1a4287a2eb17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRadius: 0.5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  speed: 0.8
+  playerTransform: {fileID: 1032879927}
 --- !u!1 &1260504348
 GameObject:
   m_ObjectHideFlags: 0
@@ -7676,7 +7702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1284590525}
   - component: {fileID: 1284590526}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_S_R_0001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7760,7 +7786,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1317747661}
   - component: {fileID: 1317747662}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_M_0001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8125,7 +8151,7 @@ GameObject:
   - component: {fileID: 1368418886}
   - component: {fileID: 1368418888}
   - component: {fileID: 1368418887}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: PixelManPlatforms_8 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8289,7 +8315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1385457187}
   - component: {fileID: 1385457188}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_S_R_0001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8571,7 +8597,7 @@ Transform:
   m_GameObject: {fileID: 1400934213}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.189, y: -3.86, z: 0}
+  m_LocalPosition: {x: -7.164, y: -3.86, z: 0}
   m_LocalScale: {x: 11.820232, y: 7.526352, z: 2.6618397}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8587,7 +8613,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1403291757}
   - component: {fileID: 1403291758}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_M_0001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8676,7 +8702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1449270795}
   - component: {fileID: 1449270796}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_S_R_0001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9140,7 +9166,7 @@ GameObject:
   - component: {fileID: 1502225604}
   - component: {fileID: 1502225606}
   - component: {fileID: 1502225605}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: PixelManPlatforms_8 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9348,7 +9374,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1513048414}
   - component: {fileID: 1513048415}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_S_R_0001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9933,7 +9959,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1619001189}
   - component: {fileID: 1619001190}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_M_0001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10274,7 +10300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1687874883
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10388,17 +10414,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723009591}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071058, w: 0.7071078}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1024039318}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 6.5707, y: 450}
+  m_SizeDelta: {x: 6.5707, y: 1243.4692}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1723009593
 MonoBehaviour:
@@ -10488,7 +10514,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1788463604}
   - component: {fileID: 1788463605}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_M_0001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10780,7 +10806,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.011737078, y: -0.09780901}
+  m_Offset: {x: -0.004330814, y: -0.11590139}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -10791,7 +10817,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3200307, y: 0.22456567}
+  m_Size: {x: 0.669999, y: 0.1482761}
   m_EdgeRadius: 0
 --- !u!114 &1801774377
 MonoBehaviour:
@@ -10805,7 +10831,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb09087fe7923014484b1a4287a2eb17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemieCenterTransform: {fileID: 0}
+  detectionRadius: 0.5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  speed: 0.8
+  playerTransform: {fileID: 1032879927}
 --- !u!1 &1803952696
 GameObject:
   m_ObjectHideFlags: 0
@@ -10844,7 +10875,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 416.6, y: -9.299988}
+  m_AnchoredPosition: {x: 4.599976, y: -247.19998}
   m_SizeDelta: {x: 75.0462, y: 18.4864}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1803952698
@@ -10984,7 +11015,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1824887729}
   - component: {fileID: 1824887730}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_M_0001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11203,7 +11234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1906203920
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11275,7 +11306,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &1906203922
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11337,7 +11368,7 @@ Transform:
   m_GameObject: {fileID: 1906203919}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.758, y: 2.231, z: 0}
+  m_LocalPosition: {x: -7.758, y: 2.062, z: 0}
   m_LocalScale: {x: 0.062748924, y: 0.062748924, z: 0.062748924}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11372,16 +11403,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1906203919}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d142e8b574327f24e9718a580be17138, type: 3}
+  m_Script: {fileID: 11500000, guid: cfdaa3fcb2fb87045aa7f2394fbdf6db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundCheckTransform: {fileID: 1788811323}
+  speed: 3
+  jumpingPower: 6
+  rb: {fileID: 1906203921}
+  groundCheck: {fileID: 1788811323}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  jumpForce: 1
 --- !u!1 &1915658116
 GameObject:
   m_ObjectHideFlags: 0
@@ -11392,7 +11425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1915658117}
   - component: {fileID: 1915658118}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_M_0001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11643,7 +11676,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1999408787}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11769,7 +11802,7 @@ GameObject:
   - component: {fileID: 2010899888}
   - component: {fileID: 2010899890}
   - component: {fileID: 2010899889}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: PixelManPlatforms_8 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12401,7 +12434,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2105063505}
   - component: {fileID: 2105063506}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Snow_G_M_0001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
