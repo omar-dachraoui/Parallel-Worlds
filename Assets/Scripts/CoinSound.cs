@@ -21,7 +21,7 @@ public class CoinSound : MonoBehaviour
         if (playerActions != null)
         {
             audioSource.Play();
-            Destroy(gameObject, .6f);
+            Destroy(gameObject, 0.15f);
         }
     }
 }
