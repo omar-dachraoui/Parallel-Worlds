@@ -8,13 +8,17 @@ public class PlayerActions : MonoBehaviour
     private const string SPECIAL_ATTACK_ANIMATION_TRIGGER= "SpecialAttack";
     Animator playerAnimator;
     public int health = 4;
+    public int numberOfCoins = 0;
     [SerializeField] private Transform specialAttackPoint;
     [SerializeField] private Transform specialAttackPrefab;
+    [SerializeField] private Transform youLosePanel;
+    [SerializeField] private AudioSource specialAttackSound;
     [SerializeField] private int specialAttackMaxAmmo = 4;
     [HideInInspector]public int specialAttackAmmo ;
     // Start is called before the first frame update
     void Awake()
     {
+        youLosePanel.gameObject.SetActive(false);
         playerAnimator = GetComponent<Animator>();
         specialAttackAmmo = specialAttackMaxAmmo;
     }
@@ -30,6 +34,7 @@ public class PlayerActions : MonoBehaviour
         {
             playerAnimator.SetTrigger(SPECIAL_ATTACK_ANIMATION_TRIGGER);
             Instantiate(specialAttackPrefab, specialAttackPoint.position, specialAttackPoint.rotation);
+            specialAttackSound.Play();
             
             specialAttackAmmo--;
         }
@@ -40,6 +45,7 @@ public class PlayerActions : MonoBehaviour
         if(health <= 0)
         {
             this.gameObject.SetActive(false);
+            youLosePanel.gameObject.SetActive(true);
         }
     }
 }

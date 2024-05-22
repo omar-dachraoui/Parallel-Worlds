@@ -21,7 +21,7 @@ public class IcePlayerMovement : MonoBehaviour
 
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
+        horizontal = Input.GetAxisRaw("SecondPlayer");
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {

@@ -12,7 +12,7 @@ public class LosingTrigger : MonoBehaviour
         playerActions = other.GetComponent<PlayerActions>();
         if(playerActions != null)
         {
-            playerActions.health = 0;
+            playerActions.transform.gameObject.SetActive(false);
         }
       
     }

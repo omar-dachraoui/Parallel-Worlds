@@ -20,6 +20,7 @@ public class CoinSound : MonoBehaviour
         playerActions = other.gameObject.GetComponent<PlayerActions>();
         if (playerActions != null)
         {
+            playerActions.numberOfCoins++;
             audioSource.Play();
             Destroy(gameObject, 0.15f);
         }
