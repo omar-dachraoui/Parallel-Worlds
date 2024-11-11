@@ -10,21 +10,37 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 8f;
     [SerializeField] private float jumpingPower = 16f;
     private bool isFacingRight = true;
-    Animator playerAnimator;
+    private string inputAxis;
+    [SerializeField] Animator playerAnimator;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private InputMode inputMode = InputMode.SecondPlayer;
+    enum InputMode
+    {
+        SecondPlayer,
+        Horizontal
+    }
 
     private void Awake()
     {
-        playerAnimator = GetComponent<Animator>();
+        
+        switch (inputMode)
+        {
+            case InputMode.SecondPlayer:
+                inputAxis = "SecondPlayer";
+                break;
+            case InputMode.Horizontal:
+                inputAxis = "Horizontal";
+                break;
+        }
     }
 
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-
+       horizontal = Input.GetAxisRaw(inputAxis);
+        
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);

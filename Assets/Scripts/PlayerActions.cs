@@ -6,9 +6,10 @@ public class PlayerActions : MonoBehaviour
 {
     private const string ATTACK_ANIMATION_TRIGGER= "NormalAttack";
     private const string SPECIAL_ATTACK_ANIMATION_TRIGGER= "SpecialAttack";
-    Animator playerAnimator;
+    
     public int health = 4;
     public int numberOfCoins = 0;
+    [SerializeField]Animator playerAnimator;
     [SerializeField] private Transform specialAttackPoint;
     [SerializeField] private Transform specialAttackPrefab;
     [SerializeField] private Transform youLosePanel;
@@ -19,7 +20,7 @@ public class PlayerActions : MonoBehaviour
     void Awake()
     {
         youLosePanel.gameObject.SetActive(false);
-        playerAnimator = GetComponent<Animator>();
+        
         specialAttackAmmo = specialAttackMaxAmmo;
     }
 
