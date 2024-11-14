@@ -3229,7 +3229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 337300176}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ICEAttackSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7518,8 +7518,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb47944b90add4c4d9b303d730ad0825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthOfEnemie: 100
-  damageTakenByPlayer: 10
+  health: 4
+  teamId: 0
 --- !u!1 &706625669
 GameObject:
   m_ObjectHideFlags: 0
@@ -8918,7 +8918,7 @@ GameObject:
   - component: {fileID: 828107065}
   - component: {fileID: 828107062}
   - component: {fileID: 828107066}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FirePlayerVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9121,7 +9121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc17f524457dd1b4a9af4e5bf6d15c83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInputHandler: {fileID: 1623776081}
+  playerActions: {fileID: 0}
 --- !u!1 &831626894
 GameObject:
   m_ObjectHideFlags: 0
@@ -9332,11 +9332,14 @@ GameObject:
   - component: {fileID: 880425333}
   - component: {fileID: 880425332}
   - component: {fileID: 880425331}
+  - component: {fileID: 880425338}
   - component: {fileID: 880425330}
   - component: {fileID: 880425328}
   - component: {fileID: 880425334}
   - component: {fileID: 880425335}
-  m_Layer: 0
+  - component: {fileID: 880425337}
+  - component: {fileID: 880425336}
+  m_Layer: 8
   m_Name: ICEPlayerLogic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9500,10 +9503,81 @@ MonoBehaviour:
   specialAttackPoint: {fileID: 337300176}
   specialAttackPrefab: {fileID: 4377614925896477466, guid: 55148f1ec911c044ab97eed4e75e090e, type: 3}
   playerInputHandler: {fileID: 880425334}
+  health: {fileID: 880425337}
   specialAttackMaxAmmo: 4
   specialAttackAmmo: 0
-  health: 4
   numberOfCoins: 0
+--- !u!114 &880425336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880425327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb545e19e5b9c14fa20b2e88150444c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &880425337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880425327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb47944b90add4c4d9b303d730ad0825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 4
+  teamId: 1
+--- !u!61 &880425338
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880425327}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.17000961, y: 1.0984497}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 8.933687, y: 1.0834248}
+  m_EdgeRadius: 0
 --- !u!1 &896372901
 GameObject:
   m_ObjectHideFlags: 0
@@ -10925,7 +10999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0ce19abd04715d40b02920deb828a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerActions: {fileID: 880425335}
+  playerHealth: {fileID: 880425337}
   heartsList:
   - {fileID: 567560775}
   - {fileID: 957382828}
@@ -11859,8 +11933,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb47944b90add4c4d9b303d730ad0825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthOfEnemie: 100
-  damageTakenByPlayer: 10
+  health: 4
+  teamId: 0
 --- !u!1 &1016984523
 GameObject:
   m_ObjectHideFlags: 0
@@ -12439,18 +12513,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d142e8b574327f24e9718a580be17138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontal: 0
-  jumpDuration: 0.01
-  speed: 2
-  jumpingPower: 4
-  isFacingRight: 1
-  inputAxis: 
-  playerAnimator: {fileID: 1032879930}
-  rb: {fileID: 1032879925}
-  groundCheck: {fileID: 1999408787}
-  groundLayer:
-    m_Bits: 8
-  inputMode: 1
 --- !u!95 &1032879930
 Animator:
   serializedVersion: 5
@@ -12487,9 +12549,9 @@ MonoBehaviour:
   specialAttackPoint: {fileID: 484321597}
   specialAttackPrefab: {fileID: 4694381827359631304, guid: 8bdba8d74eec8724c921fb2a815dc115, type: 3}
   playerInputHandler: {fileID: 0}
+  health: {fileID: 0}
   specialAttackMaxAmmo: 4
   specialAttackAmmo: 0
-  health: 4
   numberOfCoins: 0
 --- !u!82 &1032879932
 AudioSource:
@@ -14695,8 +14757,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb47944b90add4c4d9b303d730ad0825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthOfEnemie: 30
-  damageTakenByPlayer: 10
+  health: 1
+  teamId: 0
 --- !u!1 &1189240582
 GameObject:
   m_ObjectHideFlags: 0
@@ -15553,8 +15615,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb47944b90add4c4d9b303d730ad0825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthOfEnemie: 100
-  damageTakenByPlayer: 10
+  health: 4
+  teamId: 0
 --- !u!1 &1257158955
 GameObject:
   m_ObjectHideFlags: 0
@@ -16066,8 +16128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb47944b90add4c4d9b303d730ad0825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthOfEnemie: 100
-  damageTakenByPlayer: 10
+  health: 4
+  teamId: 0
 --- !u!1 &1260504348
 GameObject:
   m_ObjectHideFlags: 0
@@ -16810,7 +16872,7 @@ GameObject:
   - component: {fileID: 1360738448}
   - component: {fileID: 1360738445}
   - component: {fileID: 1360738449}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ICEPlayerVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17013,7 +17075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc17f524457dd1b4a9af4e5bf6d15c83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInputHandler: {fileID: 880425334}
+  playerActions: {fileID: 880425335}
 --- !u!1 &1361322742
 GameObject:
   m_ObjectHideFlags: 0
@@ -18125,7 +18187,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1421918805}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18528,7 +18590,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1457732706}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FireAttackSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20522,7 +20584,8 @@ GameObject:
   - component: {fileID: 1623776082}
   - component: {fileID: 1623776081}
   - component: {fileID: 1623776087}
-  m_Layer: 0
+  - component: {fileID: 1623776088}
+  m_Layer: 8
   m_Name: FirePlayerLogic
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -20686,10 +20749,24 @@ MonoBehaviour:
   specialAttackPoint: {fileID: 1457732706}
   specialAttackPrefab: {fileID: 4694381827359631304, guid: 8bdba8d74eec8724c921fb2a815dc115, type: 3}
   playerInputHandler: {fileID: 1623776081}
+  health: {fileID: 1623776088}
   specialAttackMaxAmmo: 4
   specialAttackAmmo: 0
-  health: 4
   numberOfCoins: 0
+--- !u!114 &1623776088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623776080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb47944b90add4c4d9b303d730ad0825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 4
+  teamId: 1
 --- !u!1 &1634358495
 GameObject:
   m_ObjectHideFlags: 0
@@ -21398,8 +21475,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb47944b90add4c4d9b303d730ad0825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthOfEnemie: 100
-  damageTakenByPlayer: 10
+  health: 4
+  teamId: 0
 --- !u!1 &1696574181
 GameObject:
   m_ObjectHideFlags: 0
@@ -22061,7 +22138,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1738351033}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22680,8 +22757,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb47944b90add4c4d9b303d730ad0825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthOfEnemie: 30
-  damageTakenByPlayer: 10
+  health: 4
+  teamId: 0
 --- !u!1 &1803952696
 GameObject:
   m_ObjectHideFlags: 0
@@ -22761,7 +22838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0ce19abd04715d40b02920deb828a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerActions: {fileID: 1623776087}
+  playerHealth: {fileID: 1623776088}
   heartsList:
   - {fileID: 497006152}
   - {fileID: 407973760}
@@ -23664,9 +23741,9 @@ MonoBehaviour:
   specialAttackPoint: {fileID: 1537216597}
   specialAttackPrefab: {fileID: 4377614925896477466, guid: 55148f1ec911c044ab97eed4e75e090e, type: 3}
   playerInputHandler: {fileID: 0}
+  health: {fileID: 0}
   specialAttackMaxAmmo: 4
   specialAttackAmmo: 0
-  health: 4
   numberOfCoins: 0
 --- !u!82 &1906203927
 AudioSource:
@@ -23776,18 +23853,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d142e8b574327f24e9718a580be17138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontal: 0
-  jumpDuration: 0.01
-  speed: 2
-  jumpingPower: 4
-  isFacingRight: 1
-  inputAxis: 
-  playerAnimator: {fileID: 1906203924}
-  rb: {fileID: 1906203921}
-  groundCheck: {fileID: 1788811323}
-  groundLayer:
-    m_Bits: 8
-  inputMode: 0
 --- !u!1 &1908597511
 GameObject:
   m_ObjectHideFlags: 0

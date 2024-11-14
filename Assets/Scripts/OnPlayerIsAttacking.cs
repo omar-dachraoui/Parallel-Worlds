@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class OnPlayerIsAttacking : MonoBehaviour
 {
-    [SerializeField] private PlayerInputHandler playerInputHandler;
+    [SerializeField] private PlayerActions playerActions; 
     
 
     void SimpleAttack()
     {
-        Debug.Log("Simple Attack");
+        playerActions.NormalAttack();
     }
 }

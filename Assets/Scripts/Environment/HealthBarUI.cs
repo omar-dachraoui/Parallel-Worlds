@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HealthBarUI : MonoBehaviour
 {
-    [SerializeField] private PlayerActions playerActions;
+    [SerializeField] private Health playerHealth;
     [SerializeField] private List<Image> heartsList = new List<Image>();
     int health;
     int maxHealth = 4;
@@ -22,7 +22,7 @@ public class HealthBarUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        health = playerActions.health;
+        health = playerHealth.health;
         
         if(maxHealth > health)
         {

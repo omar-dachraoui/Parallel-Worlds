@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemieHealth : MonoBehaviour, IDamagebale
+public class Health : MonoBehaviour
 {
     private const string HIT_ANIMATION_TRIGGER = "IsHit";
 
-    [SerializeField] private float healthOfEnemie = 100f;
+    public int health = 4;
     
-    [SerializeField] private float damageTakenByPlayer = 10f;
+    public int teamId = 1;
     Animator animator;
 
     private void Awake()
@@ -21,8 +21,9 @@ public class EnemieHealth : MonoBehaviour, IDamagebale
     public void TakeDamage()
     {
         animator.SetTrigger(HIT_ANIMATION_TRIGGER);
-        healthOfEnemie -= damageTakenByPlayer;
-        if(healthOfEnemie <= 0)
+        health--;
+        
+        if(health <= 0)
         {
             Destroy(this.gameObject);
         }

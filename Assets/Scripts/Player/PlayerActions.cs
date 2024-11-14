@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerActions : MonoBehaviour
+public class PlayerActions : EnemyDetection
 {
     
     
@@ -11,14 +11,12 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] private Transform specialAttackPoint;
     [SerializeField] private Transform specialAttackPrefab;
     [SerializeField] private PlayerInputHandler playerInputHandler;
+    [SerializeField] private Health health;
     
     
     [SerializeField] private int specialAttackMaxAmmo = 4;
     [HideInInspector]public int specialAttackAmmo ;
-
-    public int health = 4;
-
-    public int numberOfCoins = 0;
+    [HideInInspector]public int numberOfCoins = 0;
     // Start is called before the first frame update
     void Awake()
     {
@@ -30,19 +28,34 @@ public class PlayerActions : MonoBehaviour
     {
         switch (playerInputHandler.playerState)
         {
-            
-            
             case PlayerInputHandler.PlayerState.SpecialAttacking:
-                if(specialAttackAmmo>0)
-                {
-                    Instantiate(specialAttackPrefab, specialAttackPoint.position, specialAttackPoint.rotation);
-                    specialAttackAmmo--;
-                }
-                break;
+               SpecialAttack();
+            break;
         }
     }
-    public void TakeDamage()
+
+
+
+    void SpecialAttack()
     {
-        
+        if(specialAttackAmmo>0)
+        {
+            Instantiate(specialAttackPrefab, specialAttackPoint.position, specialAttackPoint.rotation);
+            specialAttackAmmo--;
+        }
+    }
+
+
+
+   
+
+
+    public void NormalAttack()
+    {
+        Debug.Log(isPlayerInRange);
+        if(isPlayerInRange && enemyHasHealth.teamId != health.teamId)
+        {
+            enemyHasHealth.TakeDamage();
+        }
     }
 }

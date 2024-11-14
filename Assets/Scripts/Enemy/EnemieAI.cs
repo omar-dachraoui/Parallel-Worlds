@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class EnemieAI : MonoBehaviour
+public class EnemieAI : EnemyDetection
 {
     private const string ATTACK_ANIMATION_TRIGGER= "IsAttacking";
     private const string RUN_ANIMATION_TRIGGER= "IsRunning";
     public float detectionRadius = 5f; // The radius of the detection circle
     public LayerMask playerLayer; // Layer mask to filter only enemy colliders
-    PlayerActions playerActions;
     
-    bool isPlayerInRange ;
+    
+    
     [SerializeField] private float speed = .8f;
     [SerializeField] private Transform playerTransform;
     [SerializeField] private float offset = 1f;
@@ -22,7 +22,7 @@ public class EnemieAI : MonoBehaviour
     void Awake()
     {
         enemieAnimator = GetComponent<Animator>();
-        playerActions = playerTransform.GetComponent<PlayerActions>();
+        
     }
 
     // Update is called once per frame
@@ -59,23 +59,7 @@ public class EnemieAI : MonoBehaviour
      
        
     }
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        
-        playerActions = other.gameObject.GetComponent<PlayerActions>();
-        if (playerActions != null)
-        {
-            isPlayerInRange = true;
-        }
-    }
-    void OnTriggerExit2D(Collider2D other)
-    {
-        playerActions = other.gameObject.GetComponent<PlayerActions>();
-        if (playerActions != null)
-        {
-            isPlayerInRange = false; 
-        }
-    }
+    
 
      bool DetectEnemies()
     {
@@ -96,7 +80,10 @@ public class EnemieAI : MonoBehaviour
 
     void DamagePlayer()
     {
-        playerActions.TakeDamage();
+        if(isPlayerInRange && enemyHasHealth.teamId == 1)
+       {
+            enemyHasHealth.TakeDamage();
+       }
     }
 
     void MoveTowardsPlayer()
