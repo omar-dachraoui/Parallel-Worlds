@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface ICanBeDammagedByPlayer 
+public interface IDamagebale 
 {
-  void TakeDamageByPlayer();
+  void TakeDamage();
 }

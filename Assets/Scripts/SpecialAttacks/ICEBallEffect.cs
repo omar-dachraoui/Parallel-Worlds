@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class FireBallEffect : MonoBehaviour
+public class ICEBallEffect : MonoBehaviour
 {
-  
-   [SerializeField] float maxDistance = 10f;
+    [SerializeField] float maxDistance = 10f;
    [SerializeField] float speed = 5f;
-   ICanBeDammagedByPlayer CanBeDammagedByPlayer;
+   
 
     // Update is called once per frame
     void Update()
@@ -24,13 +22,12 @@ public class FireBallEffect : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        CanBeDammagedByPlayer = other.GetComponent<ICanBeDammagedByPlayer>();
-        if(CanBeDammagedByPlayer != null)
+        IDamagebale CanBeDammaged = other.GetComponent<IDamagebale>();
+        if(CanBeDammaged != null)
         {
-            CanBeDammagedByPlayer.TakeDamageByPlayer();
+            CanBeDammaged.TakeDamage();
             Destroy(this.gameObject);
         }
         
     }
-    
 }

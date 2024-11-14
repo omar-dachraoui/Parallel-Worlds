@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemieHealth : MonoBehaviour, ICanBeDammagedByPlayer
+public class EnemieHealth : MonoBehaviour, IDamagebale
 {
     private const string HIT_ANIMATION_TRIGGER = "IsHit";
 
@@ -18,7 +18,7 @@ public class EnemieHealth : MonoBehaviour, ICanBeDammagedByPlayer
 
 
 
-    public void TakeDamageByPlayer()
+    public void TakeDamage()
     {
         animator.SetTrigger(HIT_ANIMATION_TRIGGER);
         healthOfEnemie -= damageTakenByPlayer;
