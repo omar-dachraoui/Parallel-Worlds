@@ -61,7 +61,7 @@ public class EnemieAI : EnemyDetection
     }
     
 
-     bool DetectEnemies()
+    bool DetectEnemies()
     {
         // Define the center of the circle (in this case, the position of the GameObject this script is attached to)
         Vector2 center = transform.position;
@@ -95,14 +95,14 @@ public class EnemieAI : EnemyDetection
 
     void Flip()
     {
-       if(this.transform.position.x < playerTransform.position.x)
-            {
-                this.transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
-            else
-            {
-                this.transform.rotation = Quaternion.Euler(0, 180, 0);
-            }
+       if(this.transform.position.x <= playerTransform.position.x)
+        {
+            this.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        else
+        {
+            this.transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
     }
 
     

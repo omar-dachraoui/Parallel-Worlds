@@ -19,11 +19,7 @@ public class PlayerAnimations : MonoBehaviour
     [SerializeField] Animator playerAnimator;
     [SerializeField] private AudioSource specialAttackSound;
     private bool isFacingRight = true;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
 
 
 
@@ -34,9 +30,11 @@ public class PlayerAnimations : MonoBehaviour
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
         {
             isFacingRight = !isFacingRight;
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
+            Vector3 localScale = transform.rotation.eulerAngles;
+            localScale.y += 180f;
+            transform.rotation = Quaternion.Euler(localScale);
+            //localScale.x *= -1f;
+            //transform.localScale = localScale;
         }
     }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class FireBallEffect : MonoBehaviour
+public class SpecialAttackEffect : MonoBehaviour
 {
   
    [SerializeField] float maxDistance = 10f;
@@ -24,10 +24,10 @@ public class FireBallEffect : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        IDamagebale CanBeDammaged = other.GetComponent<IDamagebale>();
-        if(CanBeDammaged != null)
+        Health CanBeDammagedByPlayer = other.GetComponent<Health>();
+        if(CanBeDammagedByPlayer != null && CanBeDammagedByPlayer.teamId != 1)
         {
-            CanBeDammaged.TakeDamage();
+            CanBeDammagedByPlayer.TakeDamage();
             Destroy(this.gameObject);
         }
         

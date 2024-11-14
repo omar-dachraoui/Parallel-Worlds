@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,21 +7,24 @@ public class Health : MonoBehaviour
 {
     private const string HIT_ANIMATION_TRIGGER = "IsHit";
 
+    public EventHandler OnDammageTaken;
+
+
     public int health = 4;
     
     public int teamId = 1;
-    Animator animator;
+    //Animator animator;
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        
     }
 
 
 
     public void TakeDamage()
     {
-        animator.SetTrigger(HIT_ANIMATION_TRIGGER);
+        OnDammageTaken?.Invoke(this, EventArgs.Empty);
         health--;
         
         if(health <= 0)
