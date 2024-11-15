@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerInputHandler : MonoBehaviour
@@ -8,6 +9,7 @@ public class PlayerInputHandler : MonoBehaviour
     public enum PlayerState
     {
         Idle,
+        Dead,
         Walking,
         Jumping,
         NormalAttacking,
@@ -31,6 +33,7 @@ public class PlayerInputHandler : MonoBehaviour
     [HideInInspector] public PlayerState  playerState ;
     [SerializeField] private InputMode inputMode = InputMode.SecondPlayer;
     [SerializeField] private PlayerMvt playerMvt;
+    [SerializeField] private Health playerHealth;
     
     private void Awake()
     {
@@ -52,8 +55,11 @@ public class PlayerInputHandler : MonoBehaviour
     void Update()
     {
        horizontal = Input.GetAxisRaw(inputAxis);
-        
-        if (Input.GetButtonDown("Jump"))
+        if(playerHealth.health <= 0)
+        {
+            playerState = PlayerState.Dead;
+        }
+        else if(Input.GetButtonDown("Jump"))
         {
             
             playerState = PlayerState.Jumping;

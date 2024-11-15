@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -7,6 +8,8 @@ public class EnemieAI : EnemyDetection
 {
     private const string ATTACK_ANIMATION_TRIGGER= "IsAttacking";
     private const string RUN_ANIMATION_TRIGGER= "IsRunning";
+    private const string HIT_ANIMATION_TRIGGER= "IsHit";
+    private const string DEATH_ANIMATION_TRIGGER= "isDead";
     public float detectionRadius = 5f; // The radius of the detection circle
     public LayerMask playerLayer; // Layer mask to filter only enemy colliders
     
@@ -15,6 +18,10 @@ public class EnemieAI : EnemyDetection
     [SerializeField] private float speed = .8f;
     [SerializeField] private Transform playerTransform;
     [SerializeField] private float offset = 1f;
+
+     Health enemyHealth;
+
+    
     
    
     Animator enemieAnimator ; 
@@ -22,7 +29,19 @@ public class EnemieAI : EnemyDetection
     void Awake()
     {
         enemieAnimator = GetComponent<Animator>();
-        
+        enemyHealth = GetComponent<Health>();
+        enemyHealth.OnDeath += EnemyHealth_OnDeath;
+        enemyHealth.OnDammageTaken += EnemyHealth_OnDammageTaken;
+    }
+
+    private void EnemyHealth_OnDammageTaken(object sender, EventArgs e)
+    {
+        enemieAnimator.SetBool(HIT_ANIMATION_TRIGGER, true);
+    }
+
+    private void EnemyHealth_OnDeath(object sender, EventArgs e)
+    {
+        enemieAnimator.SetBool(DEATH_ANIMATION_TRIGGER, true);
     }
 
     // Update is called once per frame
@@ -33,7 +52,7 @@ public class EnemieAI : EnemyDetection
             Flip();
             Debug.Log("Enemy detected!");
             
-            if(this.transform.position.x != playerTransform.position.x + offset)
+            if(this.transform.position.x != playerTransform.position.x + offset && !isPlayerInRange)
             {
                 MoveTowardsPlayer();
             }
@@ -53,7 +72,9 @@ public class EnemieAI : EnemyDetection
         }
         else
         {
+            
             enemieAnimator.SetBool(ATTACK_ANIMATION_TRIGGER, false);
+    
             enemieAnimator.SetBool(RUN_ANIMATION_TRIGGER, false);
         }
      
