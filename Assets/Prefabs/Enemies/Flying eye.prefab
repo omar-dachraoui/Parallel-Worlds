@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 5618108617078959860}
   - component: {fileID: 4970430967899923118}
   - component: {fileID: 1117098054445403913}
-  - component: {fileID: 1923280493888429889}
   - component: {fileID: 2685611897212831376}
+  - component: {fileID: 4569380756849740698}
+  - component: {fileID: 248127380607685765}
   m_Layer: 0
   m_Name: Flying eye
   m_TagString: Untagged
@@ -143,7 +144,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04824376, y: -0.020410776}
+  m_Offset: {x: 0.04824376, y: -0.031412244}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -154,7 +155,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1640153, y: 0.17514896}
+  m_Size: {x: 0.1640153, y: 0.1971519}
   m_EdgeRadius: 0
 --- !u!61 &4970430967899923118
 BoxCollider2D:
@@ -188,7 +189,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.031314373, y: -0.028467536}
+  m_Offset: {x: 0.031314373, y: -0.02480042}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -199,7 +200,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5491848, y: 0.1677196}
+  m_Size: {x: 0.5491848, y: 0.16038537}
   m_EdgeRadius: 0
 --- !u!114 &1117098054445403913
 MonoBehaviour:
@@ -220,21 +221,6 @@ MonoBehaviour:
   speed: 0.5
   playerTransform: {fileID: 0}
   offset: 1
---- !u!114 &1923280493888429889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6343625687763846833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb47944b90add4c4d9b303d730ad0825, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathDelay: 2
-  health: 1
-  teamId: 0
 --- !u!114 &2685611897212831376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,4 +233,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 135652a74a9e5254d8cb77a70758afcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 1923280493888429889}
+  health: {fileID: 4569380756849740698}
+--- !u!114 &4569380756849740698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6343625687763846833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb47944b90add4c4d9b303d730ad0825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  teamId: 0
+--- !u!50 &248127380607685765
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6343625687763846833}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

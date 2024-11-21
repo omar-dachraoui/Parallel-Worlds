@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -47,6 +48,12 @@ public class PlayerInputHandler : MonoBehaviour
                 inputAxis = "Horizontal";
                 break;
         }
+        playerHealth.OnDeath += PlayerHealth_OnDeath;
+    }
+
+    private void PlayerHealth_OnDeath(object sender, EventArgs e)
+    {
+        playerState = PlayerState.Dead;
     }
 
 
@@ -55,38 +62,37 @@ public class PlayerInputHandler : MonoBehaviour
     void Update()
     {
        horizontal = Input.GetAxisRaw(inputAxis);
-        if(playerHealth.health <= 0)
+        if(playerState != PlayerState.Dead)
         {
-            playerState = PlayerState.Dead;
-        }
-        else if(Input.GetButtonDown("Jump"))
-        {
-            
-            playerState = PlayerState.Jumping;
-            
-        }
-        else if(Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            
-            playerState = PlayerState.NormalAttacking;
-           
-        }
-        else if(Input.GetKeyDown(KeyCode.C) )
-        {         
-            playerState = PlayerState.SpecialAttacking;  
-        }
-        else if (Mathf.Abs(horizontal) > 0.1f )
-        {
-            
-            playerState = PlayerState.Walking;
-        }
-        else if(!playerMvt.IsGrounded())
-        {
-            playerState = PlayerState.falling;
-        }
-        else
-        {
-            playerState = PlayerState.Idle;
+            if(Input.GetButtonDown("Jump"))
+            {
+
+                playerState = PlayerState.Jumping;
+
+            }
+            else if(Input.GetKeyDown(KeyCode.Mouse0))
+            {
+
+                playerState = PlayerState.NormalAttacking;
+
+            }
+            else if(Input.GetKeyDown(KeyCode.C) )
+            {         
+                playerState = PlayerState.SpecialAttacking;  
+            }
+            else if (Mathf.Abs(horizontal) > 0.1f )
+            {
+
+                playerState = PlayerState.Walking;
+            }
+            else if(!playerMvt.IsGrounded())
+            {
+                playerState = PlayerState.falling;
+            }
+            else
+            {
+                playerState = PlayerState.Idle;
+            }
         }
         
 

@@ -8,21 +8,35 @@ public class EnergieBarUI : MonoBehaviour
     [SerializeField] private List<Image> specialAttackIconList = new List<Image>();
     int ammo;
     int maxAmmo = 4;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
         ammo = playerActions.specialAttackAmmo;
+        if(ammo == 0)
+        {
+            foreach (var icon in specialAttackIconList)
+            {
+                icon.enabled = false;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < ammo; i++)
+            {
+                specialAttackIconList[i].enabled = true;
+            }
+        }
         
         if(maxAmmo > ammo)
         {
             specialAttackIconList[(maxAmmo-ammo)-1].enabled = false;
         }
+
+       
         
     }
+
+
+ 
 }

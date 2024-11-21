@@ -14,7 +14,7 @@ public class PlayerActions : EnemyDetection
     [SerializeField] private Health health;
     
     
-    [SerializeField] private int specialAttackMaxAmmo = 4;
+    public int specialAttackMaxAmmo = 4;
     [HideInInspector]public int specialAttackAmmo ;
     [HideInInspector]public int numberOfCoins = 0;
     // Start is called before the first frame update

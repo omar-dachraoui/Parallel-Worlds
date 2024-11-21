@@ -41,7 +41,7 @@ public class EnemieAI : EnemyDetection
 
     private void EnemyHealth_OnDeath(object sender, EventArgs e)
     {
-        enemieAnimator.SetBool(DEATH_ANIMATION_TRIGGER, true);
+        enemieAnimator.SetTrigger(DEATH_ANIMATION_TRIGGER);
     }
 
     // Update is called once per frame
@@ -101,7 +101,7 @@ public class EnemieAI : EnemyDetection
 
     void DamagePlayer()
     {
-        if(isPlayerInRange && enemyHasHealth.teamId == 1)
+        if(isPlayerInRange && enemyHasHealth.teamId == 1 && enemyHasHealth.health > 0)
        {
             enemyHasHealth.TakeDamage();
        }

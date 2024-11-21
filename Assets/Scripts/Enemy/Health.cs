@@ -5,15 +5,17 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    private const string HIT_ANIMATION_TRIGGER = "IsHit";
+    
 
     public EventHandler OnDammageTaken;
     public EventHandler OnDeath;
 
-    [SerializeField] private float deathDelay = 2f;
+    
     public int health = 4;
     
     public int teamId = 1;
+
+    public bool isDead = false;
     
 
 
@@ -23,20 +25,22 @@ public class Health : MonoBehaviour
         health--;
         
         
-        if(health > 0)
+        if(health <= 0)
         {
-            OnDammageTaken?.Invoke(this, EventArgs.Empty);
             
+            OnDeath?.Invoke(this, EventArgs.Empty);
         }
         else
         {
-            OnDeath?.Invoke(this, EventArgs.Empty);
+           
+            OnDammageTaken?.Invoke(this, EventArgs.Empty);
             
         }
     }
 
     public void Hide()
     {
+        isDead = true;
         gameObject.SetActive(false);
     }
 }
