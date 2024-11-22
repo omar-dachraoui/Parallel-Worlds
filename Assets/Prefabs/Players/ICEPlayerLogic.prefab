@@ -121,7 +121,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a7421cbdd48c866439697f54ac51b961, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -474,9 +474,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb47944b90add4c4d9b303d730ad0825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathDelay: 2
   health: 4
   teamId: 1
+  isDead: 0
 --- !u!1 &2126328121336924982
 GameObject:
   m_ObjectHideFlags: 0
